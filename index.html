@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Fama Barber Shop & Beauty Salon | Expert Haircuts in Denton, TX</title>
+  <meta name="description" content="Fama Barber Shop and Beauty Salon in Denton, TX offers expert haircuts, shaves, beard trims, and grooming services. Rated 4.6 stars with 116+ reviews. Book your appointment now!" />
+  <meta name="keywords" content="Barber shop,Denton barbers,Haircuts,Shaves,Beard trim,Men's grooming,Fama Barber Shop" />
+  <meta name="author" content="Fama Barber Shop" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Fama Barber Shop & Beauty Salon | Expert Haircuts in Denton, TX" />
+  <meta property="og:description" content="Visit Fama Barber Shop and Beauty Salon in Denton, TX for professional grooming services. Rated 4.6 stars with over 116 reviews. Call +1 940-612-9127 to book!" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:url" content="https://your-deployed-url.vercel.app/" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/599/599305.png" />
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-padding-top: 64px;
+    }
+    a {
+      color: #d63939;
+      text-decoration: none;
+      outline-offset: 2px;
+    }
+    a:hover,
+    a:focus,
+    button:hover,
+    button:focus {
+      color: #ff4d4d;
+      outline: none;
+    }
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid #ff4d4d;
+      outline-offset: 2px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1b1b1b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #d63939;
+      border-radius: 4px;
+    }
+
+    /* Header */
+    header {
+      background-color: #1b1b1b;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      user-select: none;
+      box-shadow: 0 2px 8px #000000bb;
+      filter: drop-shadow(0 0 3px #d63939aa);
+      background-attachment: scroll;
+      transition: background-color 0.3s ease;
+    }
+    header.scrolled {
+      background-color: #111111cc;
+      filter: drop-shadow(0 0 6px #d63939cc);
+      backdrop-filter: saturate(180%) blur(8px);
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    header nav ul li a {
+      color: #e0e0e0;
+      transition: color 0.3s ease;
+    }
+    header nav ul li a:hover,
+    header nav ul li a:focus {
+      color: #d63939;
+    }
+    header h1 {
+      user-select: text;
+    }
+
+    /* Sticky social bar left side */
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0.5rem;
+      z-index: 10001;
+    }
+    .social-bar a {
+      background-color: #d63939;
+      color: white;
+      padding: 0.45rem 0.8rem;
+      border-radius: 0 5px 5px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 0 6px #d63939bb;
+      transition: background-color 0.2s ease;
+    }
+    .social-bar a svg {
+      fill: white;
+      width: 18px;
+      height: 18px;
+    }
+    .social-bar a:hover,
+    .social-bar a:focus {
+      background-color: #ff4d4d;
+      box-shadow: 0 0 8px #ff4d4dbb;
+      outline: none;
+    }
+
+    /* Hero Section */
+    #hero {
+      height: 600px;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 2rem;
+      user-select:none;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(21,21,21,0.85);
+      z-index: 0;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 0.2s;
+    }
+    #hero h2 {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      user-select: text;
+      opacity: 0;
+      transform: translateY(1rem);
+      animation: slideFadeUp 1s ease forwards 0.4s;
+    }
+    #hero .rating {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #d63939;
+      margin-bottom: 1.5rem;
+      user-select: none;
+      opacity: 0;
+      transform: translateY(1rem);
+      animation: slideFadeUp 1s ease forwards 0.6s;
+    }
+    #hero .stars {
+      color: #d63939;
+      font-size: 1.5rem;
+    }
+    #hero .status {
+      font-weight: 500;
+      color: #7fff7f;
+      font-size: 1rem;
+      margin-left: 1rem;
+      user-select: none;
+    }
+    #hero button {
+      position: relative;
+      background-color: #d63939;
+      color: white;
+      border: none;
+      padding: 1rem 3rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #d63939bb;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      opacity: 0;
+      transform: translateY(1rem);
+      animation: slideFadeUp 1s ease forwards 0.8s;
+    }
+    #hero button:hover,
+    #hero button:focus-visible {
+      background-color: #ff4d4d;
+      box-shadow: 0 0 25px #ff4d4dbb;
+      outline: none;
+    }
+
+    /* Main container */
+    main {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 2rem;
+      user-select:none;
+    }
+
+    /* About Section */
+    #about {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1.1s;
+    }
+    #about img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #d6393999;
+      user-select: none;
+      filter: drop-shadow(0 0 8px #d63939dd);
+      transition: transform 0.3s ease;
+    }
+    #about img:hover,
+    #about img:focus-visible {
+      transform: scale(1.05);
+      outline: none;
+    }
+    #about .about-text {
+      flex: 1;
+      color: #dcdcdc;
+    }
+    #about h3 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      user-select: text;
+    }
+    #about p {
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+    #about p strong {
+      color: #d63939;
+    }
+    #about a {
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+      color: #d63939;
+      transition: color 0.3s ease;
+    }
+    #about a:hover,
+    #about a:focus-visible {
+      color: #ff4d4d;
+      outline: none;
+    }
+
+    /* Services Section */
+    #services {
+      margin-bottom: 4rem;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1.3s;
+    }
+    #services h3 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      user-select: text;
+    }
+    .service-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background-color: #1b1b1b;
+      box-shadow: 0 0 15px #d6393977;
+      border-radius: 12px;
+      padding: 2rem 1.8rem;
+      flex: 1 1 220px;
+      max-width: 260px;
+      color: #ddd;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    .card:hover,
+    .card:focus-visible {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px #ff4d4dbb;
+      outline: none;
+    }
+    .card svg {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+      fill: #d63939;
+    }
+    .card h4 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      user-select: text;
+    }
+    .card p {
+      font-weight: 300;
+      font-size: 1rem;
+      min-height: 48px;
+      line-height: 1.4;
+      color: #bbb;
+    }
+    .price-tag {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #d63939;
+      margin-top: auto;
+    }
+
+    /* Testimonials Section */
+    #testimonials {
+      background-color: #1b1b1b;
+      padding: 3rem 2rem 3rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 4rem;
+      box-shadow: 0 0 25px #d6393988;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: none;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1.5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    #testimonials h3 {
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      user-select: text;
+    }
+    .testimonial-slide {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.3rem;
+      text-align: center;
+      color: #ccc;
+      min-height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-text {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      max-width: 90%;
+    }
+    .testimonial-text.active {
+      opacity: 1;
+      position: relative;
+    }
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .testimonial-dot {
+      width: 14px;
+      height: 14px;
+      background-color: #555;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+    .testimonial-dot.active {
+      background-color: #d63939;
+      box-shadow: 0 0 5px #d6393988;
+    }
+    .testimonial-dot:focus-visible {
+      outline: 2px solid #ff4d4d;
+    }
+
+    /* Contact Section */
+    #contact {
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1.7s;
+    }
+    #contact h3 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      user-select: text;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+    .contact-info a {
+      font-weight: 600;
+      color: #d63939;
+    }
+    .contact-info a:hover,
+    .contact-info a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+    form {
+      background-color: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #d6393988;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    form input, form textarea {
+      background-color: #121212;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      color: #eee;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+    form input:focus,
+    form textarea:focus {
+      border-color: #d63939;
+      outline: none;
+    }
+    form button {
+      background-color: #d63939;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 0 15px #d63939bb;
+      user-select: none;
+    }
+    form button:hover,
+    form button:focus-visible {
+      background-color: #ff4d4d;
+      box-shadow: 0 0 25px #ff4d4dbb;
+      outline: none;
+    }
+
+    /* Scroll to top button */
+    #to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #d63939;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #d63939cc;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 11000;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #to-top:hover,
+    #to-top:focus-visible {
+      background: #ff4d4d;
+      box-shadow: 0 0 20px #ff4d4dbb;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1b1b1b;
+      padding: 1rem 2rem;
+      color: #777;
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.9rem;
+      user-select: none;
+      box-shadow: inset 0 1px 0 #2a2a2a;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      #about {
+        flex-direction: column;
+      }
+      .service-cards {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 600px) {
+      #hero {
+        height: 420px;
+        padding: 0 1rem;
+      }
+      #hero h2 {
+        font-size: 2.25rem;
+      }
+      header {
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .social-bar {
+        left: 0.4rem;
+      }
+      main {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header role="banner" aria-label="Main site header">
+  <h1>FAMA BARBER SHOP</h1>
+  <nav role="navigation" aria-label="Primary site navigation">
+    <ul>
+      <li><a href="#services" tabindex="0">Services</a></li>
+      <li><a href="#about" tabindex="0">About</a></li>
+      <li><a href="#testimonials" tabindex="0">Testimonials</a></li>
+      <li><a href="#contact" tabindex="0">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="social-bar" aria-label="Social media links">
+  <a href="" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11 9.87v-6.99h-2v-2.88h2v-2.2c0-2 1.2-3.1 3-3.1.87 0 1.78.15 1.78.15v2h-1c-1 0-1.3.6-1.3 1.22v1.93h2.21l-.35 2.88h-1.86v6.99A10 10 0 0022 12z"/></svg>
+    FB
+  </a>
+  <a href="" target="_blank" rel="noopener" aria-label="Instagram" tabindex="0">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm8.25 2.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 10.002 6.002A3 3 0 0012 9z"/></svg>
+    IG
+  </a>
+  <a href="https://wa.me/19406129127" target="_blank" rel="noopener" aria-label="WhatsApp" tabindex="0">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48a11.91 11.91 0 00-16.87 16.9L2 22l1.6-4.49A11.91 11.91 0 0020.51 3.48zM12 20c-1.68 0-3.26-.52-4.58-1.41l-.33-.2-2.39.63.63-2.32-.21-.35A7.9 7.9 0 014 12a8 8 0 118 8zm3.83-5.1c-.2-.1-1.18-.58-1.36-.64-.18-.06-.31-.1-.45.1s-.52.64-.64.77c-.12.13-.24.15-.44.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.19-1.13-1.37-.12-.18-.01-.27.09-.37.09-.09.2-.23.3-.34.1-.1.13-.2.2-.33.06-.12.03-.22-.02-.32-.06-.11-1.36-3.29-1.83-4.5-.48-1.19-.97-1.03-1.36-1.05a1.92 1.92 0 00-.68-.01c-.23 0-.55.08-.84.4-.29.31-1.1 1.07-1.1 2.62 0 1.54 1.13 3.04 1.29 3.25.16.22 2.21 3.56 5.35 4.98.75.32 1.34.51 1.8.65.75.22 1.44.19 1.98.12.6-.08 1.83-.75 2.09-1.47.28-.72.28-1.34.2-1.47-.09-.11-.33-.17-.66-.3z"/></svg>
+    WA
+  </a>
+</div>
+
+<section id="hero" role="region" aria-label="Hero Section">
+  <h2>FAMA BARBER SHOP</h2>
+  <div class="rating" aria-label="Business rating four point six stars with one hundred sixteen plus reviews">
+    <span class="stars" aria-hidden="true" title="4.6 out of 5 stars">★★★★☆</span>
+    <span>4.6 (116+ reviews)</span>
+    <span class="status" aria-label="Open status, closes at 7 PM">Open ⋅ Closes 7 pm</span>
+  </div>
+  <button type="button" onclick="window.location.href='tel:+19406129127'" aria-label="Call to book appointment" tabindex="0">
+    Book Appointment
+  </button>
+</section>
+
+<main>
+  <section id="about" aria-labelledby="about-header">
+    <h3 id="about-header">About Us</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content:center;">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Interior of Fama Barber Shop" style="max-width: 360px; border-radius: 12px; box-shadow: 0 0 10px #d63939aa; user-select:none;" />
+      <p style="flex: 1; min-width: 280px; font-weight: 300; font-size: 1.1rem; color: #ccc; line-height: 1.6;">
+        Welcome to <strong>Fama Barber Shop and Beauty Salon</strong>, your local destination in <strong>Denton, TX</strong> for expert haircuts, shaves, and grooming services. We blend style with precision to ensure you look your best every day.<br /><br />
+        <strong>Location:</strong><br />
+        500 N Bell Ave #109<br />
+        Denton, TX 76209<br />
+        United States<br /><br />
+        <strong>Phone:</strong> <a href="tel:+19406129127" tabindex="0">+1 940-612-9127</a><br />
+        <a href="" target="_blank" rel="noopener noreferrer" tabindex="0">Get Directions on Google Maps</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="services-header">
+    <h3 id="services-header">Our Services</h3>
+    <div class="service-cards" role="list">
+
+      <article class="card" role="listitem" tabindex="0" aria-label="Haircut, price $20">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <path d="M52 18v-3a7 7 0 00-7-7h-4a7 7 0 00-7 7v3h-9a3 3 0 00-3 3v22a3 3 0 003 3h25a3 3 0 003-3V21a3 3 0 00-3-3zM31 15a4 4 0 018 0v3h-8zm-3 12v-3h12v3zm0 7v-3h18v3z" fill="#d63939" />
+        </svg>
+        <h4>Haircut</h4>
+        <p>Precision cuts tailored to your style with expert barbers.</p>
+        <div class="price-tag">$20</div>
+      </article>
+
+      <article class="card" role="listitem" tabindex="0" aria-label="Shave, price $15">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <path d="M45 14H19a4 4 0 00-4 4v18a4 4 0 004 4h26a4 4 0 004-4V18a4 4 0 00-4-4zm-8.5 8a4 4 0 114 4 4 4 0 01-4-4zM23 37v-2h18v2z" fill="#d63939" />
+        </svg>
+        <h4>Shave</h4>
+        <p>Classic straight razor shaves with warm towels for smooth skin.</p>
+        <div class="price-tag">$15</div>
+      </article>
+
+      <article class="card" role="listitem" tabindex="0" aria-label="Beard Trim, price $10">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <path d="M50 23H14a3 3 0 000 6h18l-3 6 4 2 6-12h8v-2a3 3 0 00-3-3z" fill="#d63939" />
+        </svg>
+        <h4>Beard Trim</h4>
+        <p>Stylish beard trims with attention to detail and care.</p>
+        <div class="price-tag">$10</div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="testimonials" aria-labelledby="testimonials-header">
+    <h3 id="testimonials-header">What Our Customers Say</h3>
+    <div class="testimonial-slide" aria-live="polite" aria-atomic="true">
+      <div class="testimonial-text active" tabindex="0" id="testimonial-0">
+        "Costly compared to other barbershops with better haircuts."
+      </div>
+      <div class="testimonial-text" tabindex="0" id="testimonial-1" style="display:none;">
+        "Friendly staff and great atmosphere!"
+      </div>
+      <div class="testimonial-text" tabindex="0" id="testimonial-2" style="display:none;">
+        "Best beard trim I've ever had - highly recommend!"
+      </div>
+    </div>
+    <div class="testimonial-nav" role="tablist" aria-label="Testimonials navigation">
+      <button class="testimonial-dot active" aria-selected="true" role="tab" aria-controls="testimonial-0" aria-label="Testimonial 1" data-index="0" tabindex="0"></button>
+      <button class="testimonial-dot" aria-selected="false" role="tab" aria-controls="testimonial-1" aria-label="Testimonial 2" data-index="1" tabindex="0"></button>
+      <button class="testimonial-dot" aria-selected="false" role="tab" aria-controls="testimonial-2" aria-label="Testimonial 3" data-index="2" tabindex="0"></button>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-header">
+    <h3 id="contact-header">Contact Us</h3>
+    <div class="contact-info">
+      <p>Phone: <a href="tel:+19406129127" tabindex="0">+1 940-612-9127</a></p>
+      <p>Location: <a href="" target="_blank" rel="noopener noreferrer" tabindex="0">500 N Bell Ave #109, Denton, TX 76209</a></p>
+    </div>
+    <form id="contact-form" aria-label="Contact form">
+      <input type="text" name="name" aria-label="Your name" placeholder="Your Name" required autocomplete="name" tabindex="0" />
+      <input type="email" name="email" aria-label="Your email" placeholder="Your Email" required autocomplete="email" tabindex="0" />
+      <textarea name="message" aria-label="Your message" placeholder="Your Message" required rows="4" tabindex="0"></textarea>
+      <button type="submit" aria-label="Send message" tabindex="0">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2023 Fama Barber Shop. All rights reserved.
+</footer>
+
+<button id="to-top" aria-label="Scroll to top" tabindex="0" title="Scroll to top">↑</button>
+<script>
+  // Sticky header background on scroll as before
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  // Testimonials slider updated: DO NOT set focus on testimonial text to prevent scroll jumps
+  const testimonials = [
+    "Costly compared to other barbershops with better haircuts.",
+    "Friendly staff and great atmosphere!",
+    "Best beard trim I've ever had - highly recommend!"
+  ];
+  let currentTestimonial = 0;
+  const testimonialTexts = document.querySelectorAll('.testimonial-text');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  function showTestimonial(index) {
+    testimonialTexts.forEach((el, i) => {
+         if(i === index) {
+        el.classList.add('active');
+        el.style.display = 'block';
+        // Prevent setting focus here to avoid scroll jump
+        dots[i].classList.add('active');
+        dots[i].setAttribute('aria-selected', 'true');
+      } else {
+        el.classList.remove('active');
+        el.style.display = 'none';
+        dots[i].classList.remove('active');
+        dots[i].setAttribute('aria-selected', 'false');
+      }
+    });
+    currentTestimonial = index;
+  }
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.dataset.index);
+      showTestimonial(index);
+    });
+    dot.addEventListener('keydown', e => {
+         if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const index = parseInt(dot.dataset.index);
+        showTestimonial(index);
+      }
+    });
+  });
+  // Auto slide every 7 seconds
+  setInterval(() => {
+    let next = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(next);
+  }, 7000);
+  // Contact form submission dummy logic
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thank you for contacting Fama Barber Shop! We will get back to you soon.');
+    form.reset();
+  });
+  // Scroll to top button
+  const toTopBtn = document.getElementById('to-top');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) {
+      toTopBtn.style.display = 'flex';
+    } else {
+      toTopBtn.style.display = 'none';
+    }
+  });
+  toTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+</script>
+
+<!-- Structured Data JSON-LD for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Fama Barber Shop and Beauty Salon",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80",
+  "telephone": "+1-940-612-9127",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "500 N Bell Ave #109",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "postalCode": "76209",
+    "addressCountry": "USA"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "116"
+  },
+  "url": "https://your-deployed-url.vercel.app/",
+  "sameAs": [
+    "https://facebook.com/famabarbershop",
+    "https://instagram.com/famabarbershop",
+    "https://wa.me/19406129127"
+  ]
+}
+</script>
+
+</body>
+</html>
+
