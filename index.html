@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Fama Barber Shop & Beauty Salon | Expert Haircuts in Denton, TX</title>
+  <title>Fama Barber Shop &amp; Beauty Salon | Expert Haircuts in Denton, TX</title>
   <meta name="description" content="Fama Barber Shop and Beauty Salon in Denton, TX offers expert haircuts, shaves, beard trims, and grooming services. Rated 4.6 stars with 116+ reviews. Book your appointment now!" />
   <meta name="keywords" content="Barber shop,Denton barbers,Haircuts,Shaves,Beard trim,Men's grooming,Fama Barber Shop" />
   <meta name="author" content="Fama Barber Shop" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Fama Barber Shop & Beauty Salon | Expert Haircuts in Denton, TX" />
+  <meta property="og:title" content="Fama Barber Shop &amp; Beauty Salon | Expert Haircuts in Denton, TX" />
   <meta property="og:description" content="Visit Fama Barber Shop and Beauty Salon in Denton, TX for professional grooming services. Rated 4.6 stars with over 116 reviews. Call +1 940-612-9127 to book!" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=1500&amp;q=80" />
   <meta property="og:type" content="business.business" />
   <meta property="og:url" content="https://your-deployed-url.vercel.app/" />
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/599/599305.png" />
@@ -79,13 +79,10 @@
       font-size: 1.25rem;
       user-select: none;
       box-shadow: 0 2px 8px #000000bb;
-      filter: drop-shadow(0 0 3px #d63939aa);
-      background-attachment: scroll;
       transition: background-color 0.3s ease;
     }
     header.scrolled {
       background-color: #111111cc;
-      filter: drop-shadow(0 0 6px #d63939cc);
       backdrop-filter: saturate(180%) blur(8px);
     }
     header nav ul {
@@ -609,6 +606,14 @@
       main {
         padding: 0 1rem;
       }
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
   </style>
 </head>
@@ -627,11 +632,11 @@
 </header>
 
 <div class="social-bar" aria-label="Social media links">
-  <a href="" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">
+  <a href="https://facebook.com/famabarbershop" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 10-11 9.87v-6.99h-2v-2.88h2v-2.2c0-2 1.2-3.1 3-3.1.87 0 1.78.15 1.78.15v2h-1c-1 0-1.3.6-1.3 1.22v1.93h2.21l-.35 2.88h-1.86v6.99A10 10 0 0022 12z"/></svg>
     FB
   </a>
-  <a href="" target="_blank" rel="noopener" aria-label="Instagram" tabindex="0">
+  <a href="https://instagram.com/famabarbershop" target="_blank" rel="noopener" aria-label="Instagram" tabindex="0">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm8.25 2.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 7a5 5 0 11-5 5 5 5 0 015-5zm0 2a3 3 0 10.002 6.002A3 3 0 0012 9z"/></svg>
     IG
   </a>
@@ -665,7 +670,7 @@
         Denton, TX 76209<br />
         United States<br /><br />
         <strong>Phone:</strong> <a href="tel:+19406129127" tabindex="0">+1 940-612-9127</a><br />
-        <a href="" target="_blank" rel="noopener noreferrer" tabindex="0">Get Directions on Google Maps</a>
+        <a href="https://goo.gl/maps/7xSmuAkQ1JyuDeRx9" target="_blank" rel="noopener noreferrer" tabindex="0">Get Directions on Google Maps</a>
       </p>
     </div>
   </section>
@@ -728,7 +733,7 @@
     <h3 id="contact-header">Contact Us</h3>
     <div class="contact-info">
       <p>Phone: <a href="tel:+19406129127" tabindex="0">+1 940-612-9127</a></p>
-      <p>Location: <a href="" target="_blank" rel="noopener noreferrer" tabindex="0">500 N Bell Ave #109, Denton, TX 76209</a></p>
+      <p>Location: <a href="https://goo.gl/maps/7xSmuAkQ1JyuDeRx9" target="_blank" rel="noopener noreferrer" tabindex="0">500 N Bell Ave #109, Denton, TX 76209</a></p>
     </div>
     <form id="contact-form" aria-label="Contact form">
       <input type="text" name="name" aria-label="Your name" placeholder="Your Name" required autocomplete="name" tabindex="0" />
@@ -744,8 +749,9 @@
 </footer>
 
 <button id="to-top" aria-label="Scroll to top" tabindex="0" title="Scroll to top">↑</button>
+
 <script>
-  // Sticky header background on scroll as before
+  // Sticky header background on scroll
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
     if(window.scrollY > 50){
@@ -754,7 +760,8 @@
       header.classList.remove('scrolled');
     }
   });
-  // Testimonials slider updated: DO NOT set focus on testimonial text to prevent scroll jumps
+
+  // Testimonials slider
   const testimonials = [
     "Costly compared to other barbershops with better haircuts.",
     "Friendly staff and great atmosphere!",
@@ -763,12 +770,12 @@
   let currentTestimonial = 0;
   const testimonialTexts = document.querySelectorAll('.testimonial-text');
   const dots = document.querySelectorAll('.testimonial-dot');
+
   function showTestimonial(index) {
     testimonialTexts.forEach((el, i) => {
-         if(i === index) {
+      if(i === index) {
         el.classList.add('active');
         el.style.display = 'block';
-        // Prevent setting focus here to avoid scroll jump
         dots[i].classList.add('active');
         dots[i].setAttribute('aria-selected', 'true');
       } else {
@@ -780,24 +787,27 @@
     });
     currentTestimonial = index;
   }
+
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
       const index = parseInt(dot.dataset.index);
       showTestimonial(index);
     });
     dot.addEventListener('keydown', e => {
-         if(e.key === 'Enter' || e.key === ' ') {
+      if(e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         const index = parseInt(dot.dataset.index);
         showTestimonial(index);
       }
     });
   });
+
   // Auto slide every 7 seconds
   setInterval(() => {
     let next = (currentTestimonial + 1) % testimonials.length;
     showTestimonial(next);
   }, 7000);
+
   // Contact form submission dummy logic
   const form = document.getElementById('contact-form');
   form.addEventListener('submit', e => {
@@ -805,6 +815,7 @@
     alert('Thank you for contacting Fama Barber Shop! We will get back to you soon.');
     form.reset();
   });
+
   // Scroll to top button
   const toTopBtn = document.getElementById('to-top');
   window.addEventListener('scroll', () => {
@@ -820,49 +831,6 @@
       behavior: 'smooth',
     });
   });
-</script>
-
-<!-- Structured Data JSON-LD for Local Business -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Fama Barber Shop and Beauty Salon",
-  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80",
-  "telephone": "+1-940-612-9127",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "500 N Bell Ave #109",
-    "addressLocality": "Denton",
-    "addressRegion": "TX",
-    "postalCode": "76209",
-    "addressCountry": "USA"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:00",
-    "closes": "19:00"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "reviewCount": "116"
-  },
-  "url": "https://your-deployed-url.vercel.app/",
-  "sameAs": [
-    "https://facebook.com/famabarbershop",
-    "https://instagram.com/famabarbershop",
-    "https://wa.me/19406129127"
-  ]
-}
 </script>
 
 </body>
